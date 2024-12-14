@@ -10,22 +10,22 @@ const Details = () => {
   const [product, setproduct] = useState([]);
   const { id } = useParams();
 
-  // const getsingleproduct = async () => {
+  const getsingleproduct = async () => {
 
-  //     try {
-  //         const { data } = await axios.get(`/products/${id}`);
-  //         setproduct(data)
-  //     } catch (error) {
-  //         console.log(error)
+      try {
+          const { data } = await axios.get(`/products/${id}`);
+          setproduct(data)
+      } catch (error) {
+          console.log(error)
 
-  //     }
-  // }
+      }
+  }
 
   useEffect(() => {
     if (!product) {
       setproduct(products.filter((p) => p.id == id)[0]);
     }
-    // getsingleproduct();
+    getsingleproduct();
   }, []);
 
   return product ? (

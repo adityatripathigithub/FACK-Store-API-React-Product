@@ -48,6 +48,7 @@ const Home = () => {
               <h1 className="hover:text-blue-400 duration-[0.2s]">{p.title}</h1>
             </Link>
           ))}
+          
       </div>
     </>
   ) : (
